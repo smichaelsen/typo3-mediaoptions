@@ -1,0 +1,22 @@
+{
+    "name": "smichaelsen/mediaoptions",
+    "description": "Provide options for TYPO3 media files, depending on their type.",
+    "type": "typo3-cms-extension",
+    "license": "GPL-2.0+",
+    "autoload": {
+        "psr-4": {
+            "Smichaelsen\\Mediaoptions\\": "Classes/"
+        }
+    },
+    "require": {
+        "typo3/cms-core": "^7.6"
+    },
+    "replace": {
+        "mediaoptions": "self.version"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
