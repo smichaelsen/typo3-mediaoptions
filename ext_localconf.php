@@ -1,9 +1,3 @@
 <?php
 
-unset($GLOBALS['TYPO3_CONF_VARS']['SYS']['formEngine']['formDataGroup']['tcaDatabaseRecord'][\TYPO3\CMS\Backend\Form\FormDataProvider\TcaFlexProcess::class]);
-
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['formEngine']['formDataGroup']['tcaDatabaseRecord'][\Smichaelsen\Mediaoptions\Backend\Form\FormDataProvider\TcaFlexProcess::class] = [
-    'depends' => [
-        \TYPO3\CMS\Backend\Form\FormDataProvider\TcaFlexPrepare::class,
-    ],
-];
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_befunc.php']['getFlexFormDSClass'][] = \Smichaelsen\Mediaoptions\Hooks\GetFlexformDataStructureHook::class;
