@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>YouTube</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <autoplay>
+                        <TCEforms>
+                            <label>Autoplay</label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </autoplay>
+                    <cc_load_policy>
+                        <TCEforms>
+                            <label>Show captions by default</label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </cc_load_policy>
+                    <color>
+                        <TCEforms>
+                            <label>Color</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items>
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">red</numIndex>
+                                        <numIndex index="1">red</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">white</numIndex>
+                                        <numIndex index="1">white</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </color>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>
