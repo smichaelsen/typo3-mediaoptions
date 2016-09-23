@@ -61,14 +61,14 @@
                             </config>check
                         </TCEforms>
                     </preventFullScreen>
-                    <cc_load_policy>
+                    <ccLoadPolicy>
                         <TCEforms>
                             <label>Show captions by default</label>
                             <config>
                                 <type>check</type>
                             </config>
                         </TCEforms>
-                    </cc_load_policy>
+                    </ccLoadPolicy>
                     <color>
                         <TCEforms>
                             <label>Color</label>
