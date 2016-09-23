@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Vimeo: Playback</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <autoplay>
+                        <TCEforms>
+                            <label>Autoplay</label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </autoplay>
+                    <loop>
+                        <TCEforms>
+                            <label>Play video in loop</label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </loop>
+                </el>
+            </ROOT>
+        </sDEF>
+        <appearance>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Vimeo: Player UI</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <color>
+                        <TCEforms>
+                            <label>Color</label>
+                            <config>
+                                <type>input</type>
+                                <default>#00adef</default>
+                                <wizards>
+                                    <colorChoice>
+                                        <type>colorbox</type>
+                                        <title>color</title>
+                                        <module>
+                                            <name>wizard_colorpicker</name>
+                                        </module>
+                                        <JSopenParams>height=600,width=380,status=0,menubar=0,scrollbars=1</JSopenParams>
+                                    </colorChoice>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </color>
+                    <disableUserPortrait>
+                        <TCEforms>
+                            <label>Disable user's portrait</label>
+                            <config>
+                                <type>check</type>
+                            </config>check
+                        </TCEforms>
+                    </disableUserPortrait>
+                    <disableTitle>
+                        <TCEforms>
+                            <label>Disable title</label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </disableTitle>
+                </el>
+            </ROOT>
+        </appearance>
+        <advanced>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Vimeo: Advanced Features</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <playerId>
+                        <TCEforms>
+                            <label>Player Id for JavaScript access</label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </playerId>
+                </el>
+            </ROOT>
+        </advanced>
+    </sheets>
+</T3DataStructure>

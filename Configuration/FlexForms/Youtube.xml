@@ -7,7 +7,7 @@
         <sDEF>
             <ROOT>
                 <TCEforms>
-                    <sheetTitle>YouTube</sheetTitle>
+                    <sheetTitle>YouTube: Playback</sheetTitle>
                 </TCEforms>
                 <type>array</type>
                 <el>
@@ -19,6 +19,48 @@
                             </config>
                         </TCEforms>
                     </autoplay>
+                    <start>
+                        <TCEforms>
+                            <label>Start time (in seconds)</label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </start>
+                    <end>
+                        <TCEforms>
+                            <label>End time (in seconds)</label>
+                            <config>
+                                <type>input</type>
+                            </config>
+                        </TCEforms>
+                    </end>
+                    <loop>
+                        <TCEforms>
+                            <label>Play video in loop</label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </loop>
+                </el>
+            </ROOT>
+        </sDEF>
+        <appearance>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>YouTube: Player UI</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <preventFullScreen>
+                        <TCEforms>
+                            <label>Prevent full screen</label>
+                            <config>
+                                <type>check</type>
+                            </config>check
+                        </TCEforms>
+                    </preventFullScreen>
                     <cc_load_policy>
                         <TCEforms>
                             <label>Show captions by default</label>
@@ -46,8 +88,67 @@
                             </config>
                         </TCEforms>
                     </color>
+                    <hideControls>
+                        <TCEforms>
+                            <label>Hide Player controls</label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </hideControls>
+                    <hideAnnotation>
+                        <TCEforms>
+                            <label>Hide Video annotations</label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </hideAnnotation>
+                    <modestBranding>
+                        <TCEforms>
+                            <label>Less YouTube branding</label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </modestBranding>
+                    <relatedVideos>
+                        <TCEforms>
+                            <label>Show related videos after playback</label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </relatedVideos>
                 </el>
             </ROOT>
-        </sDEF>
+        </appearance>
+        <advanced>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>YouTube: Advanced Features</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <enablejsapi>
+                        <TCEforms>
+                            <label>Enable JS API</label>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </enablejsapi>
+                    <passLanguageAlong>
+                        <TCEforms>
+                            <label>Pass the frontend language to YouTube</label>
+                            <config>
+                                <type>check</type>
+                                <default>1</default>
+                            </config>
+                        </TCEforms>
+                    </passLanguageAlong>
+                </el>
+            </ROOT>
+        </advanced>
     </sheets>
 </T3DataStructure>
