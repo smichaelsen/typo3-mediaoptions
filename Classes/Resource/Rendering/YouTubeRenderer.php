@@ -110,48 +110,48 @@ class YouTubeRenderer extends \TYPO3\CMS\Core\Resource\Rendering\YouTubeRenderer
     protected function getEmbedUrlParameters($mediaoptions, $videoId)
     {
         $embedUrlParameters = [];
-        $mediaoptionsFlexFormData = GeneralUtility::makeInstance(ObjectManager::class)->get(FlexFormService::class)->convertFlexFormContentToArray($mediaoptions);
-        if ((int)$mediaoptionsFlexFormData['autoplay'] === 1) {
+        $flexFormData = GeneralUtility::makeInstance(ObjectManager::class)->get(FlexFormService::class)->convertFlexFormContentToArray($mediaoptions);
+        if ((int)$flexFormData['autoplay'] === 1) {
             $embedUrlParameters['autoplay'] = 1;
         }
-        if ((int)$mediaoptionsFlexFormData['ccLoadPolicy'] === 1) {
+        if ((int)$flexFormData['ccLoadPolicy'] === 1) {
             $embedUrlParameters['cc_load_policy'] = 1;
         }
-        if ((int)$mediaoptionsFlexFormData['enablejsapi'] === 1) {
+        if ((int)$flexFormData['enablejsapi'] === 1) {
             $embedUrlParameters['enablejsapi'] = 1;
         }
-        if (!empty($mediaoptionsFlexFormData['end'])) {
-            $embedUrlParameters['end'] = (int)$mediaoptionsFlexFormData['end'];
+        if (!empty($flexFormData['end'])) {
+            $embedUrlParameters['end'] = (int)$flexFormData['end'];
         }
-        if ((int)$mediaoptionsFlexFormData['hideAnnotation'] === 1) {
+        if ((int)$flexFormData['hideAnnotation'] === 1) {
             $embedUrlParameters['iv_load_policy'] = 3;
         }
-        if ((int)$mediaoptionsFlexFormData['hideControls'] === 1) {
+        if ((int)$flexFormData['hideControls'] === 1) {
             $embedUrlParameters['controls'] = 0;
         }
-        if ((int)$mediaoptionsFlexFormData['loop'] === 1) {
+        if ((int)$flexFormData['loop'] === 1) {
             $embedUrlParameters['loop'] = 1;
             $embedUrlParameters['playlist'] = $videoId;
         }
-        if ((int)$mediaoptionsFlexFormData['modestBranding'] === 1) {
+        if ((int)$flexFormData['modestBranding'] === 1) {
             $embedUrlParameters['modestbranding'] = 1;
         }
-        if ((int)$mediaoptionsFlexFormData['passLanguageAlong'] === 1) {
+        if ((int)$flexFormData['passLanguageAlong'] === 1) {
             $languageIsoCode = $this->getTypoScriptFrontendController()->sys_language_isocode;
             if (!empty($languageIsoCode)) {
                 $embedUrlParameters['hl'] = $languageIsoCode;
             }
         }
-        if ((int)$mediaoptionsFlexFormData['preventFullScreen'] === 1) {
+        if ((int)$flexFormData['preventFullScreen'] === 1) {
             $embedUrlParameters['fs'] = 0;
         }
-        if ((int)$mediaoptionsFlexFormData['relatedVideos'] === 0) {
+        if ((int)$flexFormData['relatedVideos'] === 0) {
             $embedUrlParameters['rel'] = 0;
         }
-        if (!empty($mediaoptionsFlexFormData['start'])) {
-            $embedUrlParameters['start'] = (int)$mediaoptionsFlexFormData['start'];
+        if (!empty($flexFormData['start'])) {
+            $embedUrlParameters['start'] = (int)$flexFormData['start'];
         }
-        if ($mediaoptionsFlexFormData['color'] === 'white') {
+        if ($flexFormData['color'] === 'white') {
             $embedUrlParameters['color'] = 'white';
         }
         return $embedUrlParameters;
