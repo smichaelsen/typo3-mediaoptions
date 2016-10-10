@@ -40,11 +40,11 @@ class YouTubeRenderer extends \TYPO3\CMS\Core\Resource\Rendering\YouTubeRenderer
         }
         $videoId = $this->getOnlineMediaHelper($file)->getOnlineMediaId($orgFile);
 
-        if (empty($options['additionalConfig']['mediaoptions'])) {
+        if (empty($options['additionalConfig']['referenceProperties']['mediaoptions'])) {
             // legacy options rendering
             $embedUrlParameterString = $this->getLegacyEmbedUrlParameterString($options);
         } else {
-            $embedUrlParameters = $this->getEmbedUrlParameters($options['additionalConfig']['mediaoptions'], $videoId);
+            $embedUrlParameters = $this->getEmbedUrlParameters($options['additionalConfig']['referenceProperties']['mediaoptions'], $videoId);
             // @todo: insert hook to modify $embedUrlParameters
             $embedUrlParameterString = http_build_query($embedUrlParameters);
         }
