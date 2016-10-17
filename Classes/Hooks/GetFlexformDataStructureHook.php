@@ -12,9 +12,8 @@ class GetFlexformDataStructureHook
      * @param array $conf
      * @param array $row
      * @param string $table
-     * @param string $fieldName
      */
-    public function getFlexFormDS_postProcessDS(&$dataStructArray, $conf, $row, $table, $fieldName)
+    public function getFlexFormDS_postProcessDS(&$dataStructArray, $conf, $row, $table)
     {
         if (strpos($conf['ds_pointerField'], ':') !== false) {
             list($localField, $foreignField) = explode(':', $conf['ds_pointerField']);
